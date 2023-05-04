@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.over{
+ overflow:hidden;
+ width:1500px;
+  height:800px;
+}
+
+
+   .bjimg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      object-fit: cover;
+
+    }
+
+.title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 400px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 64px;
+    font-weight: 500;
+    font-family: "宋体";
+
+}
+.title:hover {
+            color: rgb(232,71,65);
+            font-size: 100px;
+}
+
+/* 设置整体页面高度 */
+html, body {
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+       font-family: "宋体";
+}
+
+/* 上方导航栏 */
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(51, 51, 51, 0.4);
+    color: #fff;
+   font-family: "宋体";
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* 导航栏中的图标 */
+.nav img {
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* 导航栏中的占位器 */
+.nav .spacer {
+    width: 70%;
+}
+
+/* 导航栏中的按钮 */
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+   font-family: "宋体";
+}
+
+
+/* 页面内容  版心 */
+.container {
+    /* 使用 calc 计算高度 */
+    height: calc(100% - 50px);
+    /* 设置版心宽度 */
+    width: 1100px;
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 使用弹性布局 */
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* 左侧部分，用来放置用户信息 */
+.container-left {
+    height: 100%;
+    width: 250px;
+}
+
+.container-left-container{
+ height: 50%;
+    /* 和左侧部分中间留出50px间隙 */
+    width: 250px;
+    /* 若内容溢出则自动加上滚动条 */
+
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+.container-left-container img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.container h3 {
+    text-align: center;
+    padding: 10px;
+       font-family: "宋体";
+}
+/* 右侧部分，用来放置正文 */
+.container-right {
+    height: 100%;
+    /* 和左侧部分中间留出50px间隙 */
+    width: 800px;
+    /* 若内容溢出则自动加上滚动条 */
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1px;
+}
+
+.boke {
+  margin: 0 auto;
+    display: flex;
+    height: calc(100% - 50px);
+    width: 1400px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+.boke-left
+{
+    height: 720px;
+    /* 和左侧部分中间留出50px间隙 */
+    width: 330px;
+    /* 若内容溢出则自动加上滚动条 */
+
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+
+}
+
+.message
+{
+height: 50%;
+    /* 和左侧部分中间留出50px间隙 */
+    width: 330px;
+    /* 若内容溢出则自动加上滚动条 */
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+.head-name
+{
+ width: ;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.counter {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.message .head_name img {
+    width: 90px;
+    height: 90px;
+    margin-left: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+.message img
+ {width: 45px;
+    height: 45px;
+    margin-left: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+     margin-top: 22px;
+    }
+
+/* 导航栏中的按钮 */
+.head_name a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size:54px;
+}
+.hot
+{
+ width: 330px;
+ height:400px;
+ background-color: rgba(205, 255, 255, 0.5);
+
+}
+
+.hot img
+{
+width: 60px;
+ height:60px;
+}
+
+.talk
+{
+ width: 330px;
+ height:380px;
+ background-color: rgba(255, 205, 255, 0.5);
+
+}
+
+.boke-center
+{
+ height: 100%;
+    /* 和左侧部分中间留出50px间隙 */
+    width: 620px;
+
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+
+
+}
+
+.passage
+{
+ width: 650px;
+height:250px;
+ background-color: rgba(255, 255, 255, 0.5);
+}
+
+.passage1
+{
+ width: 620px;
+height:600px;
+ background-color: rgba(255, 255, 255, 0.5);
+}
+
+.boke-right
+{
+ height: 100%;
+    /* 和左侧部分中间留出50px间隙 */
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.dict
+{
+ width: 280px;
+ height:50%;
+ background-color: rgba(255, 255, 205, 0.5);
+}
+
+.classify
+{
+ width: 280px;
+ height:50%;
+ background-color: rgba(255, 255, 5, 0.5);
+}
+
+
+p {
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "宋体";
+}
+
+h2 {
+  color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+ font-family: "宋体";
+}
+h3 {
+  color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+        font-family: "宋体";
+}
+h4 {
+  color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+      font-family: "宋体";
+}
+
+h5{
+  color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+
+        font-family: "宋体";
+}
+
+
+
+a {
+    cursor:url('../img/pointer.cur'), auto;
+}
+.visit
+{
+ width: 280px;
+ height:50%;
+ background-color: rgba(255, 255, 5, 0.5);
+}
+
+
+

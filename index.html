@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <video src="./img/background.mp4"  class="bjimg" autoplay loop muted></video>
+
+ <video src="./img/background.mp4"  class="bjimg" autoplay loop muted ></video>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="./common.css">
-
-</head>
-<body>
-    <!-- 导航栏 -->
-
-    <div class="nav">
+    <link rel="stylesheet" href="./css/common.css">
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="./css/style.css" media="screen" type="text/css" />
+       <div class="nav">
         <img src="./img/head.png" alt="">
-         <a class="index.html">主页</a>
-        <a href="message.html">个人信息</a>
-        <a href="boke.html">博客</a>
+           <a class="index.html">主页</a>
+           <a href="./html/message.html">个人信息</a>
+           <a href="./html/boke.html">博客</a>
+           <a href="./html/photo.html">照片墙</a>
     </div>
 
- <h1 class="title">welcome to my world </h1>
-
-<html>
-<head>
-
 </head>
 
 <body>
-
+<div class="over">
+<canvas class="canvas"  width="500" height="400">您的浏览器不支持canvas，请升级</canvas>
+<div class="help">工具箱</div>
+<div class="ui">
+  <input class="ui-input" type="输入你的文字" />
+  <span class="ui-return">↵</span>
+</div>
+</div>
+<div class="overlay">
+  <div class="tabs">
+    <div class="tabs-labels"><span class="tabs-label">指令</span>
+    <div class="tabs-panels">
+      <ul class="tabs-panel commands">
+        <li class="commands-item"><span class="commands-item-title">文本</span><span class="commands-item-info" data-demo="hello world">任意文字</span><span class="commands-item-action">Demo</span></li>
+         <li class="commands-item"><span class="commands-item-title">倒计时</span><span class="commands-item-info" data-demo="#time">时间</span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item"><span class="commands-item-title">矩形</span><span class="commands-item-info" data-demo="#rectangle 30x15">矩形长宽<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item"><span class="commands-item-title">圆形</span><span class="commands-item-info" data-demo="#circle 25">圆形半径<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>
+        <li class="commands-item commands-item--gap"><span class="commands-item-title">现在时间</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode"></span>&nbsp;<span class="commands-item-mode"></span></span><span class="commands-item-action">Demo</span></li>
+      </ul>
+      <div class="tabs-panel ui-details">
+      </div>
+      <div class="tabs-panel ui-share">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <script src="js/index.js"></script>
+<body>
 <script>
 function clickEffect() {
   let balls = [];
@@ -166,9 +187,20 @@ function clickEffect() {
 clickEffect();//调用特效函数
 </script>
 
-</body>
-</html>
+<script type="text/javascript">
+
+	if(null !=localStorage.pagecount){
+		localStorage.pagecount=Number(localStorage.pagecount)+1;
+	}else{
+		localStorage.pagecount=1;
+		}
+	document.write("已经访问了"+localStorage.pagecount+"次<br>");
+
+</script>
 
 
 </body>
+
 </html>
+
+

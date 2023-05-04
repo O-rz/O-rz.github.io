@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <video src="../img/background.mp4"  class="bjimg" autoplay loop muted></video>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+
+</head>
+<body>
+    <!-- 导航栏 -->
+
+    <div class="nav">
+        <img src="../img/head.png" alt="">
+         <a href="../index.html">主页</a>
+        <a class="../html/message.html">个人信息</a>
+        <a href="../html/boke.html">博客</a>
+         <a href="../html/photo.html">照片墙</a>
+    </div>
+    <div class="container">
+        <div class="container-left">
+            <div class="container-left-container">
+            <img src="../img/head.png">
+                <h2>马健</h2>
+                <h2 >55210314</h2>
+                <p>&nbsp; &nbsp;&nbsp;&nbsp;   majian5521@mails.jlu.edu.cn</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <h3>淡泊明志</h3>
+                <h3>宁静致远</h3>
+                </div>
+
+            </div>
+        <div class="container-right">
+            <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;健，吉林人。少乐山水，游于天地间，幼旅书，慨叹华夏景秀，深以炎黄子孙为傲。
+                性外慎独内戏精，不善言辞维喜作文，多为粗鄙之语难登大雅。学历未精，难免得罪，不足为异也。
+                践行而后知吾之疏浅，若天地蜉蝣沧海一粟。虽然卑鄙，愈觉一世为人不可平淡如水。故曰:慎独简行，居安思危。
+            </h4>
+            <br />
+            <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;幼时可笑，妄想有朝为英雄。宇内四海，八荒悠悠，小子痴心往难谏。难比天祥之义气爱国，然，一颗丹心不改，
+                庶竭驽钝亦为我族，却无谓照汗青。却说吾心向毛，不离人间真性情。本适俗韵，远非圣贤。闻七尺之身已许国，
+                再难许卿之语，将比众为国为民之臣，顿悟之下若见神明。谓之毕竟凡胎，性自难移，有心并笃行，足矣。
+            </h4>
+            <br />
+            <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;感之过往皆浮云，生死有命，富贵在天。纵然命运多舛以痛吻，无碍报之以歌快活生。何况尚且十余载，
+                以受常人半生灾，不禁抚膺坐长叹，果真浓缩即是精华！咳，乱入虎狼之词，莫在意莫在意。
+                诚然儿时多舛不可逆，问之安得平心静气皆自愈？
+            </h4>
+            <br />
+            <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;心若止水，何愁昧平生。少乐山水，可爱世间百态，不及清风明月间，无尽造者成色，既无禁之更难得,
+                为骚人墨客所寄之，情思百年渡，前后千余载。吾静思，古往今来共一时，天地无极，人限有命。恐为世人不知，
+                写作文章以立命，闲情逸致寄于江山不老，何苦何必，山水有相逢，却与大道南北辙。年长又读汉人苏武传，
+                宁死不降卧雪牧羊，此番真为大丈夫，衬比小儿之乐，愧难当。自知无德才，不及武之一分，便不如心怀天下，
+                生有热烈，藏于俗常。饰一身正气，灼一颗红星，怀之民生向吾党旗。慎独简行记初心，居安思危得始终。
+                所思不远，若为平生。韶华不负昆仑巅，燕雀也犹翩鸿仙。
+            </h4>
+            <br />
+            <h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;吾心向阳，吾思见章，吾志示同窗，吾身立东方。祈愿岁平安，万望皆胜意。平生自努力，终了顶峰见。
+            </h4>
+
+        </div>
+        </div>
+
+
+    </div>
+
+
+<script>
+function clickEffect() {
+  let balls = [];
+  let longPressed = false;
+  let longPress;
+  let multiplier = 0;
+  let width, height;
+  let origin;
+  let normal;
+  let ctx;
+  const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
+  const canvas = document.createElement("canvas");
+  document.body.appendChild(canvas);
+  canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
+  const pointer = document.createElement("span");
+  pointer.classList.add("pointer");
+  document.body.appendChild(pointer);
+
+  if (canvas.getContext && window.addEventListener) {
+    ctx = canvas.getContext("2d");
+    updateSize();
+    window.addEventListener('resize', updateSize, false);
+    loop();
+    window.addEventListener("mousedown", function(e) {
+      pushBalls(randBetween(10, 20), e.clientX, e.clientY);
+      document.body.classList.add("is-pressed");
+      longPress = setTimeout(function(){
+        document.body.classList.add("is-longpress");
+        longPressed = true;
+      }, 500);
+    }, false);
+    window.addEventListener("mouseup", function(e) {
+      clearInterval(longPress);
+      if (longPressed == true) {
+        document.body.classList.remove("is-longpress");
+        pushBalls(randBetween(50 + Math.ceil(multiplier), 100 + Math.ceil(multiplier)), e.clientX, e.clientY);
+        longPressed = false;
+      }
+      document.body.classList.remove("is-pressed");
+    }, false);
+    window.addEventListener("mousemove", function(e) {
+      let x = e.clientX;
+      let y = e.clientY;
+      pointer.style.top = y + "px";
+      pointer.style.left = x + "px";
+    }, false);
+  } else {
+    console.log("canvas or addEventListener is unsupported!");
+  }
+
+
+  function updateSize() {
+    canvas.width = window.innerWidth * 2;
+    canvas.height = window.innerHeight * 2;
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.scale(2, 2);
+    width = (canvas.width = window.innerWidth);
+    height = (canvas.height = window.innerHeight);
+    origin = {
+      x: width / 2,
+      y: height / 2
+    };
+    normal = {
+      x: width / 2,
+      y: height / 2
+    };
+  }
+  class Ball {
+    constructor(x = origin.x, y = origin.y) {
+      this.x = x;
+      this.y = y;
+      this.angle = Math.PI * 2 * Math.random();
+      if (longPressed == true) {
+        this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+      } else {
+        this.multiplier = randBetween(6, 12);
+      }
+      this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
+      this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
+      this.r = randBetween(8, 12) + 3 * Math.random();
+      this.color = colours[Math.floor(Math.random() * colours.length)];
+    }
+    update() {
+      this.x += this.vx - normal.x;
+      this.y += this.vy - normal.y;
+      normal.x = -2 / window.innerWidth * Math.sin(this.angle);
+      normal.y = -2 / window.innerHeight * Math.cos(this.angle);
+      this.r -= 0.3;
+      this.vx *= 0.9;
+      this.vy *= 0.9;
+    }
+  }
+
+  function pushBalls(count = 1, x = origin.x, y = origin.y) {
+    for (let i = 0; i < count; i++) {
+      balls.push(new Ball(x, y));
+    }
+  }
+
+  function randBetween(min, max) {
+    return Math.floor(Math.random() * max) + min;
+  }
+
+  function loop() {
+    ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < balls.length; i++) {
+      let b = balls[i];
+      if (b.r < 0) continue;
+      ctx.fillStyle = b.color;
+      ctx.beginPath();
+      ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2, false);
+      ctx.fill();
+      b.update();
+    }
+    if (longPressed == true) {
+      multiplier += 0.2;
+    } else if (!longPressed && multiplier >= 0) {
+      multiplier -= 0.4;
+    }
+    removeBall();
+    requestAnimationFrame(loop);
+  }
+
+  function removeBall() {
+    for (let i = 0; i < balls.length; i++) {
+      let b = balls[i];
+      if (b.x + b.r < 0 || b.x - b.r > width || b.y + b.r < 0 || b.y - b.r > height || b.r < 0) {
+        balls.splice(i, 1);
+      }
+    }
+  }
+}
+clickEffect();//调用特效函数
+</script>
+
+</body>
+
+<footer>
+  <SCRIPT language=JavaScript>
+
+<!--
+
+var caution = false
+
+function setCookie(name, value, expires, path, domain, secure) {
+
+var curCookie = name + "=" + escape(value) +
+
+((expires) ? "; expires=" + expires.toGMTString() : "") +
+
+((path) ? "; path=" + path : "") +
+
+((domain) ? "; domain=" + domain : "") +
+
+((secure) ? "; secure" : "")
+
+if (!caution || (name + "=" + escape(value)).length <= 4000)
+
+document.cookie = curCookie
+
+else
+
+if (confirm("Cookie exceeds 4KB and will be cut!"))
+
+document.cookie = curCookie
+
+}
+
+function getCookie(name) {
+
+var prefix = name + "="
+
+var cookieStartIndex = document.cookie.indexOf(prefix)
+
+if (cookieStartIndex == -1)
+
+return null
+
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+
+if (cookieEndIndex == -1)
+
+cookieEndIndex = document.cookie.length
+
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+
+}
+
+function deleteCookie(name, path, domain) {
+
+if (getCookie(name)) {
+
+document.cookie = name + "=" +
+
+((path) ? "; path=" + path : "") +
+
+((domain) ? "; domain=" + domain : "") +
+
+"; expires=Thu, 01-Jan-70 00:00:01 GMT"
+
+}
+
+}
+
+function fixDate(date) {
+
+var base = new Date(0)
+
+var skew = base.getTime()
+
+if (skew > 0)
+
+date.setTime(date.getTime() - skew)
+
+}
+
+var now = new Date()
+
+fixDate(now)
+
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+
+var visits = getCookie("counter")
+
+if (!visits)
+
+visits = 1
+
+else
+
+visits = parseInt(visits) + 1
+
+setCookie("counter", visits, now)
+
+document.write("欢迎光临本站，您是第" + visits + "位访问者！")
+
+// -->
+
+</SCRIPT>
+
+
+</footer>
+</html>
