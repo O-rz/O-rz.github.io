@@ -38,6 +38,8 @@
     font-family: "宋体";
 
 }
+
+``
 .title:hover {
             color: rgb(232,71,65);
             font-size: 100px;
@@ -64,6 +66,7 @@ html, body {
     align-items: center;
 }
 
+
 /* 导航栏中的图标 */
 .nav img {
     width: 40px;
@@ -72,6 +75,7 @@ html, body {
     margin-right: 10px;
     border-radius: 50%;
 }
+
 
 /* 导航栏中的占位器 */
 .nav .spacer {
@@ -86,6 +90,10 @@ html, body {
    font-family: "宋体";
 }
 
+.nav a:hover {
+color:rgba(255, 255, 255, 0.5);
+
+}
 
 /* 页面内容  版心 */
 .container {
@@ -330,5 +338,49 @@ a {
  background-color: rgba(255, 255, 5, 0.5);
 }
 
+
+.con
+{
+/* 使用 calc 计算高度 */
+    height: 1200px;
+    /* 设置版心宽度 */
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+            left: 0;
+            right: 0;
+            margin: auto;
+}
+
+.contain_
+{
+  /* 使用 calc 计算高度 */
+    height: 100%;
+    /* 设置版心宽度 */
+    width: 900px;
+     background-color:rgba(255, 255, 255, 0.6);
+      border-bottom: 1px solid
+}
+
+.contain_ img
+{
+width:360px;
+height:220px;
+margin: 30px 20px 10px 50px;
+}
+
+.contain_ img:hover{
+ transform: scale(2);
+}
+
+.filmvideo{
+
+margin: 0 auto;
+
+width: 700px;
+
+height: 600px;
+
+}
 
 

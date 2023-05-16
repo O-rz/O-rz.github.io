@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('WELCOME|TO|MY|WORLD');
+      S.UI.simulate('HAPPY|BIRTHDAY|TO|JIANG|HAO|DAN');
     }
 
     S.Drawing.loop(function () {
