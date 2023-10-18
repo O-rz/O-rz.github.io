@@ -1,0 +1,27 @@
+<photo_directory>
+  <photo>
+    <name>Beach Sunset</name>
+    <description>A beautiful sunset on the beach</description>
+    <date>2023-05-15</date>
+    <file_path>./img/project/1.png</file_path>
+  </photo>
+  <photo>
+    <name>Mountain Landscape</name>
+    <description>Scenic view of mountains and forests</description>
+    <date>2023-04-20</date>
+    <file_path>/photos/mountain_landscape.jpg</file_path>
+  </photo>
+  <photo>
+    <name>City Skyline</name>
+    <description>Skyline of a bustling city at night</description>
+    <date>2023-06-10</date>
+    <file_path>/photos/city_skyline.jpg</file_path>
+  </photo>
+  <photo>
+    <name>Flower Garden</name>
+    <description>Colorful flowers in a vibrant garden</description>
+    <date>2023-03-05</date>
+    <file_path>/photos/flower_garden.jpg</file_path>
+  </photo>
+  <!-- 您可以继续添加更多照片 -->
+</photo_directory>
